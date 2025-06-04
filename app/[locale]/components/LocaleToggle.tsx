@@ -1,8 +1,7 @@
 "use client";
-import { ArrowDownTrayIcon, GlobeAltIcon } from "@heroicons/react/16/solid";
+import { GlobeAltIcon } from "@heroicons/react/16/solid";
 import { useLocale } from "next-intl";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
-
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React from "react";
 
 export default function LocaleToggle() {

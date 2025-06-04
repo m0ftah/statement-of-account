@@ -39,7 +39,7 @@ export default function HeaderBar({
   const t = useTranslations();
 
   return (
-    <div className="bg-green-700 px-6 py-4">
+    <div className="bg-info-dark px-6 py-4">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-end gap-4">
         <div className="flex flex-col w-full md:w-1/4">
           <label htmlFor="account" className="text-sm text-white mb-1">
