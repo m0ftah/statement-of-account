@@ -1,4 +1,4 @@
-// app/[locale]/statement/components/StatementTable.tsx
+
 "use client";
 
 import React from "react";
