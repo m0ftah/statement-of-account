@@ -27,7 +27,7 @@ export default function StatementTable({ rows }: Props) {
         <thead>
           <tr className="bg-info-light">
             {headerKeys.map((key) => {
-              // Choose alignment class based on which column:
+             
               let alignmentClass = "text-left";
               if (key === "amount") alignmentClass = "text-right";
               else if (key === "drCr") alignmentClass = "text-center";
