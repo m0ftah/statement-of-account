@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 import React, { useState, useEffect, KeyboardEvent } from "react";
 
-interface Props {
+type Props = {
   currentPage: number;
   totalPages: number;
   onPageChange: (page: number) => void;

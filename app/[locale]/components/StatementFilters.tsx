@@ -4,7 +4,7 @@ import React from "react";
 import { User } from "../type";
 import { useTranslations } from "next-intl";
 
-interface Props {
+type Props = {
   users: User[];
   selectedUserId: number | "";
   onUserChange: (id: number | "") => void;

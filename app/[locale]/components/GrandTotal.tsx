@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 
-interface Props {
-  value: number             
+type Props = {
+  value: number
   formatCurrency: (n: number) => string
 }
 

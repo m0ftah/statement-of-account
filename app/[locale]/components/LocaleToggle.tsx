@@ -33,7 +33,7 @@ export default function LocaleToggle() {
       onClick={handleClick}
       className="
               p-2 rounded-md border-2 border-white
-              bg-white text-green-700 hover:bg-green-100
+              bg-white text-info-dark hover:bg-green-100
             "
     >
       <GlobeAltIcon className="w-5 h-5" />

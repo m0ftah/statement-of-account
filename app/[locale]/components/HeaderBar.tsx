@@ -6,8 +6,9 @@ import {
 import { useTranslations } from "next-intl";
 import { User } from "../type";
 import LocaleToggle from "./LocaleToggle";
+import DatePicker from "./DatePicker";
 
-interface HeaderBarProps {
+type HeaderBarProps = {
   users: User[];
   selectedUserId: number | "";
   onUserChange: (id: number | "") => void;
@@ -22,7 +23,7 @@ interface HeaderBarProps {
   onDownload: () => void;
 
   loading: boolean; // whether the search is in progress
-}
+};
 
 export default function HeaderBar({
   users,
@@ -42,7 +43,7 @@ export default function HeaderBar({
     <div className="bg-info-dark px-6 py-4">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-end gap-4">
         <div className="flex flex-col w-full md:w-1/4">
-          <label htmlFor="account" className="text-sm text-white mb-1">
+          <label htmlFor="account" className="text-sm text-text-light mb-1">
             {t("selectUser")}
           </label>
           <select
@@ -63,31 +64,19 @@ export default function HeaderBar({
           </select>
         </div>
 
-        <div className="flex flex-col w-full md:w-1/4">
-          <label htmlFor="fromDate" className="text-sm text-white mb-1">
-            {t("fromLabel")}
-          </label>
-          <input
-            id="fromDate"
-            type="date"
-            value={dateFrom}
-            onChange={(e) => onDateFromChange(e.target.value)}
-            className="bg-white text-gray-700 text-sm rounded px-3 py-2 focus:outline-none"
-          />
-        </div>
+        <DatePicker
+          id="fromDate"
+          label={t("fromLabel")}
+          value={dateFrom}
+          onChange={onDateFromChange}
+        />
 
-        <div className="flex flex-col w-full md:w-1/4">
-          <label htmlFor="toDate" className="text-sm text-white mb-1">
-            {t("toLabel")}
-          </label>
-          <input
-            id="toDate"
-            type="date"
-            value={dateTo}
-            onChange={(e) => onDateToChange(e.target.value)}
-            className="bg-white text-gray-700 text-sm rounded px-3 py-2 focus:outline-none"
-          />
-        </div>
+        <DatePicker
+          id="toDate"
+          label={t("toLabel")}
+          value={dateTo}
+          onChange={onDateToChange}
+        />
 
         <div className="flex gap-2 mt-2 md:mt-0 ">
           <button
@@ -98,7 +87,7 @@ export default function HeaderBar({
               ${
                 loading
                   ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                  : "bg-white text-green-700 hover:bg-green-100"
+                  : "bg-white text-info-dark hover:bg-green-100"
               }
             `}
           >
@@ -109,7 +98,7 @@ export default function HeaderBar({
             onClick={onDownload}
             className="
               p-2 rounded-md border-2 border-white
-              bg-white text-green-700 hover:bg-green-100
+              bg-white text-info-dark hover:bg-green-100
             "
           >
             <ArrowDownTrayIcon className="w-5 h-5" />
