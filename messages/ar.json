@@ -1,7 +1,7 @@
 {
   "statementTitle": "كشف الحساب",
-  "page": "الصفحة",
-  "of":"من  ",
+  "page": " الصفحة {currentPage} من {totalPages}  ",
+  "of":"  ",
   "selectUser": "اختر المستخدم",
   "allUsers": "جميع المستخدمين",
   "userPlaceholder": " اختر مستخدمًا -",

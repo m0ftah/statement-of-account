@@ -1,7 +1,7 @@
 {
   "statementTitle": "Statement of Account",
-  "page": "Page",
-  "of":"of  ",
+  "page": "Page {currentPage} of {totalPages} ",
+  "of":"   ",
   "selectUser": "Select User",
   "allUsers": "All Users",
   "userPlaceholder": "-- Choose a user --",

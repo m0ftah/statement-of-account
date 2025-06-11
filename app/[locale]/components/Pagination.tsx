@@ -80,10 +80,9 @@ export default function Pagination({
 
        
         <span className="px-3 text-sm font-medium text-gray-800 whitespace-nowrap">
-         {t(`page ${currentPage} of ${totalPages}`)}
+         {t('page',{currentPage, totalPages} )  }
         </span>
 
-       
         <button
           onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
           disabled={atLast}
