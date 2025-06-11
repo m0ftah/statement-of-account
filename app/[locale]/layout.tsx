@@ -16,10 +16,10 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale}>
+      <div lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+        {children}
+      </div>
+    </NextIntlClientProvider>
   );
 }

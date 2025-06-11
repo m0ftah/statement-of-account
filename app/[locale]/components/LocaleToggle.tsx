@@ -1,4 +1,4 @@
-"use client";
+
 import { GlobeAltIcon } from "@heroicons/react/16/solid";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -20,7 +20,7 @@ export default function LocaleToggle() {
   const qs = searchParams.toString();
   const href = qs ? `${nextPathname}?${qs}` : nextPathname;
 
-  const label = otherLocale === "en" ? "English" : "العربية";
+  // const label = otherLocale === "en" ? "English" : "العربية";
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();

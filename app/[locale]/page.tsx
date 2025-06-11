@@ -19,9 +19,9 @@ export default function StatementPage() {
   const [dateTo, setDateTo] = useState<string>("");
 
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const pageSize = 10;
+  const pageSize = 5;
 
-  const { rows, grandTotal, loading, error, fetchStatement } =
+  const { rows, grandTotal, loading,  fetchStatement } =
     useStatementRows();
 
   useEffect(() => {
@@ -35,12 +35,12 @@ export default function StatementPage() {
         return res.json();
       })
       .then((data: User[]) => setUsers(data))
-      .catch(() => setError(t("errorFetchUsers")));
+      
   }, [t]);
 
   useEffect(() => {
     fetchStatement({ dateFrom, dateTo, selectedUserId, t });
-  }, []);
+  }, [ dateFrom, dateTo, fetchStatement, selectedUserId, t]);
 
   const handleDownload = () => {
     if (!downloadCsvFromRows(rows)) {
@@ -99,6 +99,5 @@ export default function StatementPage() {
     </div>
   );
 }
-function setError(arg0: string): any {
-  throw new Error("Function not implemented.");
-}
+
+

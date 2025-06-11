@@ -1,6 +1,7 @@
 {
   "statementTitle": "كشف الحساب",
-  "paginationGoTo": "اذهب إلى صفحة {{currentPage}} من {{totalPages}}",
+  "page": "الصفحة",
+  "of":"من  ",
   "selectUser": "اختر المستخدم",
   "allUsers": "جميع المستخدمين",
   "userPlaceholder": " اختر مستخدمًا -",
@@ -18,7 +19,7 @@
    "noDataToDownload": "لا توجد بيانات للتنزيل.",
   "errorFetchUsers": "حدث خطأ أثناء تحميل المستخدمين",
   "errorFetchStatement": "حدث خطأ أثناء جلب البيان",
-   "postingDate": "تاريخ الترسيـل",
+   "postingDate": "تاريخ الشراء",
   "amount": "المبلـغ",
   "drCr": "مدين/دائن",
   "narrative1": "البيان 1",

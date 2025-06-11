@@ -1,6 +1,7 @@
 {
   "statementTitle": "Statement of Account",
-  "paginationGoTo": "Page {{currentPage}} of {{totalPages}}",
+  "page": "Page",
+  "of":"of  ",
   "selectUser": "Select User",
   "allUsers": "All Users",
   "userPlaceholder": "-- Choose a user --",

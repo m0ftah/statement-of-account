@@ -1,6 +1,4 @@
 
-"use client";
-
 import React from "react";
 import { StatementRow } from "../type";
 import { useTranslations } from "next-intl";
@@ -35,7 +33,7 @@ export default function StatementTable({ rows }: Props) {
               return (
                 <th
                   key={key}
-                  className={`px-4 py-2 ${alignmentClass} text-sm font-medium text-gray-800`}
+                  className={`px-4 py-2 ${alignmentClass} text-sm font-medium text-secondary-dark`}
                 >
                   {t(key)}
                 </th>

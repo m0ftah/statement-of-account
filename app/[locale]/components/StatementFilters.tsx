@@ -1,5 +1,4 @@
 
-"use client";
 import React from "react";
 import { User } from "../type";
 import { useTranslations } from "next-intl";
@@ -89,7 +88,7 @@ export default function StatementFilters({
         className={`mt-4 sm:mt-0 px-5 py-2 rounded text-white font-semibold ${
           loading
             ? "bg-gray-400 cursor-not-allowed"
-            : "bg-green-700 hover:bg-green-800"
+            : "bg-info-dark hover:bg-info-dark"
         }`}
       >
         {loading ? t("loading") : t("fetchButton")}

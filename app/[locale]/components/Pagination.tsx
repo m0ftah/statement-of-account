@@ -1,4 +1,4 @@
-"use client";
+
 import { useTranslations } from "next-intl";
 import React, { useState, useEffect, KeyboardEvent } from "react";
 
@@ -55,7 +55,7 @@ export default function Pagination({
             ${
               atFirst
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-green-700 text-white hover:bg-green-800"
+                : "bg-info-dark text-white hover:bg-green-800"
             }
           `}
         >
@@ -71,7 +71,7 @@ export default function Pagination({
             ${
               atFirst
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-green-700 text-white hover:bg-green-800"
+                : "bg-info-dark text-white hover:bg-green-800"
             }
           `}
         >
@@ -80,7 +80,7 @@ export default function Pagination({
 
        
         <span className="px-3 text-sm font-medium text-gray-800 whitespace-nowrap">
-         {t('paginationGoTo', { currentPage, totalPages })}
+         {t(`page ${currentPage} of ${totalPages}`)}
         </span>
 
        
@@ -92,7 +92,7 @@ export default function Pagination({
             ${
               atLast
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-green-700 text-white hover:bg-green-800"
+                : "bg-info-dark text-white hover:bg-green-800"
             }
           `}
         >
@@ -108,7 +108,7 @@ export default function Pagination({
             ${
               atLast
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-green-700 text-white hover:bg-green-800"
+                : "bg-info-dark text-white hover:bg-green-800"
             }
           `}
         >
